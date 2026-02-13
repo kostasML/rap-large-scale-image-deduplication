@@ -16,3 +16,4 @@ transformers
 datasets
 Pillow
 tqdm
+PyYAML

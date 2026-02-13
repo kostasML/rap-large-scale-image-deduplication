@@ -109,9 +109,9 @@ def plot_clusters(cluster_data, cluster_labels=None, dataset=None, output_file=N
         _add_cluster_labels(embeddings, labels, cluster_labels, ax, max_clusters)
     
     # Style the title and layout
-    #title_text = f"{n_clusters} clusters • {len(labels)-n_noise:,}/{len(labels):,} points clustered"
+    title_text = f"{n_clusters} clusters • {len(labels)-n_noise:,}/{len(labels):,} points clustered"
     if dataset:
-        title_text = f"{dataset}" #\n{title_text}"
+        title_text = f"{dataset}\n{title_text}"
     
     ax.set_title(title_text, fontsize=14, color='white', fontweight='300', pad=20)
     ax.axis('off')
@@ -529,7 +529,7 @@ def main():
     
     # Perform clustering
     cluster_data = cluster_embeddings(
-        args.embeddings, args.n_components, args.metric,
+        args.embeddings.strip(), args.n_components, args.metric,
         args.eps, args.min_samples, args.n_jobs, args.output
     )
     
