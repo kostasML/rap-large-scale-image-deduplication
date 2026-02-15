@@ -13,8 +13,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Defaults (YOLO dataset root; use --dataset for HuggingFace datasets)
-IMAGES_DIR="${IMAGES_DIR:-/mnt/data/datasets/roboflow/organized_by_class/remapped/normal_abnormal/yolo-dataset-cls}"
-OUTPUT_DIR="${OUTPUT_DIR:-/mnt/data/datasets/roboflow/organized_by_class/remapped/normal_abnormal/yolo-dataset-cls/embeddings}"
+IMAGES_DIR="${IMAGES_DIR:-/mnt/data/surveilix/deployment/docker-io/annotations/tracks}"
+OUTPUT_DIR="${OUTPUT_DIR:-/mnt/data/surveilix/deployment/docker-io/annotations/embeddings}"
 BATCH_SIZE="${BATCH_SIZE:-128}"
 SPLIT="${SPLIT:-all}"
 
